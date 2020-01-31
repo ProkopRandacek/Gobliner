@@ -18,7 +18,6 @@ public class CoinBlock : MonoBehaviour
     {
         if (player.IsTouching(collider) && player.transform.position.y < transform.position.y && content)
         {
-            Debug.Log("touched");
             content = false;
             food.Yeet();
         }

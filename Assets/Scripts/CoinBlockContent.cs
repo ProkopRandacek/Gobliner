@@ -30,7 +30,7 @@ public class CoinBlockContent : MonoBehaviour
 
     public void Yeet()
     {
-        rb.AddForce(new Vector2(Random.Range(-1, 1) * 10, Random.Range(3, 4) * 100));
+        rb.AddForce(new Vector2(Random.Range(-4, 4) * 10, Random.Range(3, 4) * 100));
         yeeted = true;
         rb.gravityScale = 1;
     }
