@@ -9,9 +9,9 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform GroundCheck;					    		// A position marking where to check if the player is grounded.
 
 	const float GroundedRadius = 0.2f; // Radius of the overlap circle to determine if grounded
-	private bool Grounded;            // Whether or not the player is grounded.
+	private bool Grounded;             // Whether or not the player is grounded.
 	private Rigidbody2D rb;
-	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+	private bool m_FacingRight = true; // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
     public float fallMultiplier = 1.5f;
 
