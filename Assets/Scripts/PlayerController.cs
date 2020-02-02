@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
     void Respawn()
     {
         rb.velocity = Vector3.zero;
-        transform.position = new Vector3(-4, 1, -1);
+        transform.position = new Vector3(-4, 1, 1);
         dead = false;
         yeeted = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
