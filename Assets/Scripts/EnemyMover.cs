@@ -23,10 +23,10 @@ public class EnemyMover : MonoBehaviour
         if (col.gameObject == player)
         {
             if (player.transform.position.y - 1.1f < gameObject.transform.position.y)
-                player.GetComponent<PlayerControl>().Die();
+                player.GetComponent<PlayerController>().Die();
             else
             {
-                player.GetComponent<PlayerControl>().Jump();
+                player.GetComponent<PlayerController>().Jump();
                 this.Die();
             }
         }

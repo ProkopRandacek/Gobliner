@@ -3,10 +3,12 @@ using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
 {
-	[SerializeField] private float JumpForce = 400f;							// Amount of force added when the player jumps.
-	[Range(0, .3f)] [SerializeField] private float MovementSmoothing = 0.05f;	// How much to smooth out the movement
-	[SerializeField] private LayerMask WhatIsGround;							// A mask determining what is ground to the character
-	[SerializeField] private Transform GroundCheck;					    		// A position marking where to check if the player is grounded.
+	
+	public float JumpForce = 400f;							// Amount of force added when the player jumps.
+	[Range(0, .3f)] public float MovementSmoothing = 0.05f;	// How much to smooth out the movement
+	public LayerMask WhatIsGround;							// A mask determining what is ground to the character
+	public Transform GroundCheck;					    	// A position marking where to check if the player is grounded.
+	public GameObject HoldPos;
 
 	const float GroundedRadius = 0.2f; // Radius of the overlap circle to determine if grounded
 	private bool Grounded;             // Whether or not the player is grounded.
@@ -77,5 +79,6 @@ public class CharacterController2D : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+		HoldPos.transform.position += new Vector3(theScale.x * 1, 0, 0);
 	}
 }
