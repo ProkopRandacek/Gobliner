@@ -17,7 +17,7 @@ public class FreeFood : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Vector3.Distance(transform.position, Player.position) < distance && content)
+        if (Vector2.Distance(transform.position, Player.position) < distance && content)
         {
             content = false;
             food.Yeet();
