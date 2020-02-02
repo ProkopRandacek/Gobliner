@@ -15,11 +15,6 @@ public class LampController : MonoBehaviour
         rb.gravityScale = 0;
     }
 
-    void Update()
-    {
-        
-    }
-
     public void Holding(bool isholding)
     {
         if (isholding)

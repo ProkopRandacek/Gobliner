@@ -3,6 +3,8 @@
 public class CameraMovement : MonoBehaviour
 {
     public Transform PlayerPos;
+    public float startX;
+    public float startY;
     public float minX;
     public float maxX;
     public float minY;
@@ -10,6 +12,10 @@ public class CameraMovement : MonoBehaviour
     public float xOffset;
     private Vector3 newPos;
 
+    void Start()
+    {
+        StartPos();
+    }
     void Update()
     {
         if (PlayerPos.transform.position.x > minX && PlayerPos.transform.position.x < maxX)
@@ -22,5 +28,9 @@ public class CameraMovement : MonoBehaviour
             newPos = new Vector3(transform.position.x, PlayerPos.transform.position.y / 2, transform.position.z);
             transform.position = newPos;
         }
+    }
+    public void StartPos()
+    {
+        transform.position = new Vector3(startX, startY, -10);
     }
 }
