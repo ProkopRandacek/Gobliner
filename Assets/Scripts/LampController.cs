@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LampController : MonoBehaviour
 {
+    public string color;
+
     private Rigidbody2D rb;
     private BoxCollider2D col;
 
@@ -13,6 +15,11 @@ public class LampController : MonoBehaviour
         col = GetComponent<BoxCollider2D>();
 
         rb.gravityScale = 0;
+    }
+    void FixedUpdate()
+    {
+        if (rb.velocity.y == 0)
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
     }
 
     public void Holding(bool isholding)
@@ -24,8 +31,9 @@ public class LampController : MonoBehaviour
         }
         else
         {
-            rb.gravityScale = 1;
+            rb.gravityScale = 1.5f;
             col.enabled = true;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
 }

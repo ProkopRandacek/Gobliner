@@ -8,27 +8,27 @@ public class PlayerHolding : MonoBehaviour
 
     private GameObject holding;
     private GameObject[] Holdable;
+    private Rigidbody2D rb;
 
     void Start()
     {
         Holdable = GameObject.FindGameObjectsWithTag("Holdable");
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Submit"))
         {
             if (holding != null)
             {
+                holding.GetComponent<Rigidbody2D>().velocity = rb.velocity;
                 holding.GetComponent<LampController>().Holding(false);
                 holding = null;
                 return;
             } 
-            Debug.Log("SUBMIIIIT");
             foreach (GameObject hold in Holdable)
             {
-                Debug.Log(Vector2.Distance(hold.transform.position, transform.position));
                 if (Vector2.Distance(hold.transform.position, transform.position) < 1.5f)
                 {
                     holding = hold;
