@@ -14,10 +14,12 @@ public class EnemyMover : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
     }
+
 	void FixedUpdate()
     {
         transform.position = Vector2.MoveTowards(transform.position, transform.position + smer[i], moveSpeed * Time.fixedDeltaTime);
 	}
+    
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject == player)
@@ -32,10 +34,12 @@ public class EnemyMover : MonoBehaviour
         }
         i = new int[]{1, 0}[i];
     }
+
     public void Die()
     {
         this.Yeet();
     }
+
     private void Yeet()
     {
         rb.AddForce(new Vector2(Random.Range(-4, 4) * 10, Random.Range(3, 4) * 100));
