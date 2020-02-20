@@ -6,29 +6,32 @@ public class Unlocker : MonoBehaviour
     public int Me;
     public Image image;
     public Sprite[] sprites;
+    public bool unlocked = false;
 
     private int Level;
 
     void Start()
     {
-        Level = PlayerPrefs.GetInt("Score", 1);
+    }
+
+    void Awake()
+    {
+        Level = PlayerPrefs.GetInt("Level", 1);
 
         Debug.Log(Level);
 
         if (Level > Me)
         {
-            Debug.Log(2);
             image.sprite = sprites[2];
         }
         else if (Level < Me)
         {
-            Debug.Log(1);
             image.sprite = sprites[1];
         }
         else
         {
-            Debug.Log(0);
             image.sprite = sprites[0];
+            unlocked = true;
         }
     }
 }

@@ -2224,6 +2224,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cd6a3a1ceb6d5ec95c3ebf425ad21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Btns:
+  - {fileID: 245868358}
+  - {fileID: 1731383260}
+  - {fileID: 934492258}
+  - {fileID: 209342293}
+  - {fileID: 662319167}
+  - {fileID: 1761068163}
+  - {fileID: 1569084598}
+  - {fileID: 610216185}
+  - {fileID: 937771704}
+  - {fileID: 1606156477}
 --- !u!1 &1189082337
 GameObject:
   m_ObjectHideFlags: 0
