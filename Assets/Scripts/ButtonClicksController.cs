@@ -6,6 +6,12 @@ public class ButtonClicksController : MonoBehaviour
 {
     public GameObject[] Btns;
 
+    void Start()
+    {
+        PlayerPrefs.SetInt("Lives", 5);
+        PlayerPrefs.SetInt("Level", 1);
+    }
+
     public void OnExitClick()
     {
         Application.Quit();

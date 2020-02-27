@@ -18,8 +18,6 @@ public class Unlocker : MonoBehaviour
     {
         Level = PlayerPrefs.GetInt("Level", 1);
 
-        Debug.Log(Level);
-
         if (Level > Me)
         {
             image.sprite = sprites[2];

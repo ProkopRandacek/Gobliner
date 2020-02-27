@@ -81,5 +81,12 @@ public class PlayerController : MonoBehaviour
     void Respawn()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.SetInt("Lives", PlayerPrefs.GetInt("Lives", 0) - 1);
+        Debug.Log("dede");
+        if (PlayerPrefs.GetInt("Lives", 0) < 1)
+        {
+            Debug.Log("ded");
+            //TODO
+        }
     }
 }
