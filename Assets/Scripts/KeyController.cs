@@ -34,6 +34,7 @@ public class KeyController : MonoBehaviour
             if (wait < 0)
             {
                 PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level", 1) + 1);
+                PlayerPrefs.SetInt("BigScore", PlayerPrefs.GetInt("BigScore", 0) + PlayerPrefs.GetInt("Score", 0));
                 SceneManager.LoadScene("Scenes/Levels");
             }
         }

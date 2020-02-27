@@ -28,6 +28,7 @@ public class CoinBlockContent : MonoBehaviour
         rb.AddForce(new Vector2(Random.Range(-4, 4) * 10, Random.Range(3, 4) * 100));
         yeeted = true;
         rb.gravityScale = 1;
+        PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score", 0) + 1);
         Destroy(gameObject, 5);
     }
 }
