@@ -6,13 +6,15 @@ public class CoinBlockContent : MonoBehaviour
     private Rigidbody2D rb;
     private Transform Container;
     public Texture2D[] textures;
+    private AudioManager am;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         Container = GetComponentInParent<Transform>();
         rb.gravityScale = 0;
         GetComponent<SpriteRenderer>().sprite = Sprite.Create(textures[Random.Range(0, textures.Length - 1)], new Rect(0, 0, 150, 150), new Vector2(0.5f, 0.5f));
+        am = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -26,6 +28,7 @@ public class CoinBlockContent : MonoBehaviour
     public void Yeet()
     {
         rb.AddForce(new Vector2(Random.Range(-4, 4) * 10, Random.Range(3, 4) * 100));
+        am.Play("coin");
         yeeted = true;
         rb.gravityScale = 1;
         PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score", 0) + 1);

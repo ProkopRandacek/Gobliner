@@ -8,7 +8,7 @@ public class CoinBlock : MonoBehaviour
     private Collider2D collider;
     private bool content = true;
 
-    void Start()
+    void Awake()
     {
         collider = GetComponent<Collider2D>();
         food = GetComponentInChildren<CoinBlockContent>();

@@ -14,13 +14,16 @@ public class PlayerController : MonoBehaviour
     private bool yeeted = false;
     private bool dead = false;
     private float time = 0;
+    private AudioManager am;
 
     private void Start()
     {
         controller = GetComponent<CharacterController2D>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        am = GetComponent<AudioManager>();
     }
+
     void Update()
     {
         Horizontal = CrossPlatformInputManager.GetAxis("Horizontal") * speed;
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             jump = true;
+            am.Play("jump");
             animator.SetTrigger("jump");
         }
 
@@ -64,6 +68,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         this.Yeet();
+        am.Play("die");
         PlayerPrefs.SetInt("Score", 0);
         dead = true;
     }
