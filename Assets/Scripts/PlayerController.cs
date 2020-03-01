@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,9 +23,9 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        Horizontal = Input.GetAxis("Horizontal") * speed;
+        Horizontal = CrossPlatformInputManager.GetAxis("Horizontal") * speed;
 
-        if (Input.GetButtonDown("Jump"))
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             jump = true;
             animator.SetTrigger("jump");

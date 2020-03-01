@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerHolding : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class PlayerHolding : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Submit"))
+        if (CrossPlatformInputManager.GetButtonDown("Submit"))
         {
             if (holding != null)
             {
