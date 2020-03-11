@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8309439737991817614}
   - component: {fileID: 8309439737991817613}
   m_Layer: 0
-  m_Name: LampBlock 1
+  m_Name: LampBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8309439737991817611}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 78101698d70ec114d91a26836954e641, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

@@ -3,14 +3,15 @@
 public class EnemyMover : MonoBehaviour
 {
     public float moveSpeed = 2f;
-    public GameObject player;
 
+    private GameObject player;
     private int i = 0;
     private Vector3[] smer = new Vector3[2] { Vector3.left, Vector3.right };
     private Rigidbody2D rb;
 	
     void Start()
     {
+        player = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
     }
