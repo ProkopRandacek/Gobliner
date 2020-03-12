@@ -890,7 +890,7 @@ MonoBehaviour:
   startX: 7
   startY: 2.5
   minX: 0
-  maxX: 120
+  maxX: 204.5
   minY: 1.5
   maxY: 100
   xOffset: -7
@@ -26631,7 +26631,7 @@ Transform:
   - {fileID: 184308186}
   - {fileID: 1245885092}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1866864070
 GameObject:

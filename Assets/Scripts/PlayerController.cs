@@ -26,9 +26,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Horizontal = CrossPlatformInputManager.GetAxis("Horizontal") * speed;
+        Horizontal = Input.GetAxis("Horizontal") * speed;
 
-        if (CrossPlatformInputManager.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             jump = true;
             am.Play("jump");

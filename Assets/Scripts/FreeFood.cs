@@ -12,6 +12,7 @@ public class FreeFood : MonoBehaviour
     
     void Start()
     {
+        Player = GameObject.Find("Player").GetComponent<Transform>();
         food = GetComponentInChildren<CoinBlockContent>();
     }
 

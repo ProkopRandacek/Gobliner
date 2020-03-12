@@ -17,20 +17,9 @@ public class ButtonClicksController : MonoBehaviour
         Application.Quit();
     }
 
-    public void OnNewGameClick()
-    {
-        On1Click();
-    }
-
-    public void OnContinueClick()
-    {
-
-    }
-
     public void OnBackToMenuClick() { SceneManager.LoadScene("Scenes/Menu"); }
 
-    public void OnPlayClick()   { SceneManager.LoadScene("Scenes/GameSelect"); }
-    public void OnLevelsClick() { SceneManager.LoadScene("Scenes/Levels");     }
+    public void OnPlayClick()   { SceneManager.LoadScene("Scenes/Levels"); }
 
     public void On1Click()  { if (Btns[0].GetComponentInChildren<Unlocker>().unlocked) { SceneManager.LoadScene("Scenes/Levels/1");  } }
     public void On2Click()  { if (Btns[1].GetComponentInChildren<Unlocker>().unlocked) { SceneManager.LoadScene("Scenes/Levels/2");  } }

@@ -667,7 +667,7 @@ MonoBehaviour:
   startX: 7
   startY: 2.5
   minX: 0
-  maxX: 120
+  maxX: 230.5
   minY: 1.5
   maxY: 100
   xOffset: -7
