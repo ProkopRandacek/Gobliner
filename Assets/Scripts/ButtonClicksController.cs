@@ -8,8 +8,14 @@ public class ButtonClicksController : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("Lives", 5);
-        PlayerPrefs.SetInt("Level", 1);
+		if (PlayerPrefs.GetInt("Lives", -420) == -420)
+		{
+			PlayerPrefs.SetInt("Lives", 5);
+        }
+		if (PlayerPrefs.GetInt("Level", -420) == -420)
+		{
+			PlayerPrefs.SetInt("Level", 1);
+        }
     }
 
     public void OnExitClick()
