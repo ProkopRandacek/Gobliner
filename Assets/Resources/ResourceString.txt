@@ -1,4 +1,5 @@
 play;Play
+score;Score
 exit;Exit
 
 lvl1;Level 1

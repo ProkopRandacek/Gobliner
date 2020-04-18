@@ -24,7 +24,7 @@ public class ButtonClicksController : MonoBehaviour
     }
 
     public void OnBackToMenuClick() { SceneManager.LoadScene("Scenes/Menu"); }
-
+    public void OnScoreClick() { SceneManager.LoadScene("Scenes/Score"); }
     public void OnPlayClick()   { SceneManager.LoadScene("Scenes/Levels"); }
 
     public void On1Click()  { if (Btns[0].GetComponentInChildren<Unlocker>().unlocked) { SceneManager.LoadScene("Scenes/Levels/1");  } }
