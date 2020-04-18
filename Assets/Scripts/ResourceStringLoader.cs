@@ -20,6 +20,8 @@ public class ResourceStringLoader : MonoBehaviour
 		string[] text = ta.text.Split('\n');
 		foreach (string line in text)
 		{
+			if (line.Length == 0)
+				continue;
 			if (line.Split(';')[0].ToLower() == name.ToLower())
 			{
 				return line.Split(';')[1];

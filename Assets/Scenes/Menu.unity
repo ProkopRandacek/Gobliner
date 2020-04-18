@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 67194107}
   - component: {fileID: 67194106}
   - component: {fileID: 67194105}
+  - component: {fileID: 67194108}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -237,6 +238,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67194103}
   m_CullTransparentMesh: 0
+--- !u!114 &67194108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67194103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fd082780ddfe5ec9f6883df953ecdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Exit
 --- !u!1 &222296179
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +263,7 @@ GameObject:
   - component: {fileID: 222296183}
   - component: {fileID: 222296182}
   - component: {fileID: 222296181}
+  - component: {fileID: 222296184}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -362,6 +377,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222296179}
   m_CullTransparentMesh: 0
+--- !u!114 &222296184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222296179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fd082780ddfe5ec9f6883df953ecdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Play
 --- !u!1 &391614023
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\x13"
+  m_Text: Play
 --- !u!222 &1284031367
 CanvasRenderer:
   m_ObjectHideFlags: 0
