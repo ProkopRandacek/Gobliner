@@ -1,6 +1,7 @@
 play;Play
 score;Score
 exit;Exit
+generate;Generate sale token
 
 lvl1;Level 1
 lvl2;Level 2

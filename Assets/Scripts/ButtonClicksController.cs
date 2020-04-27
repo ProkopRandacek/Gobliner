@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +22,11 @@ public class ButtonClicksController : MonoBehaviour
     public void OnExitClick()
     {
         Application.Quit();
+    }
+	
+    public void OnGenerateClick()
+    {
+       throw new NotImplementedException(); 
     }
 
     public void OnBackToMenuClick() { SceneManager.LoadScene("Scenes/Menu"); }

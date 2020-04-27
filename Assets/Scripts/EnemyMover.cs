@@ -25,7 +25,6 @@ public class EnemyMover : MonoBehaviour
     {
         if (col.gameObject == player)
         {
-            Debug.Log("collision");
             if (player.transform.position.y - 1f < gameObject.transform.position.y)
                 player.GetComponent<PlayerController>().Die();
             else
@@ -41,6 +40,7 @@ public class EnemyMover : MonoBehaviour
     public void Die()
     {
         this.Yeet();
+		PlayerPrefs.SetInt("Kills", PlayerPrefs.GetInt("Kills", 0) + 1);
     }
 
     private void Yeet()
