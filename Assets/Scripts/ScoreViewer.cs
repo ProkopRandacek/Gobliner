@@ -14,6 +14,6 @@ public class ScoreViewer : MonoBehaviour
 
     void Update()
     {
-        text.text = "Score: " + PlayerPrefs.GetInt("Score", 0).ToString() + "\nLives: " + PlayerPrefs.GetInt("Lives", 0);
+        text.text = PlayerPrefs.GetInt("Lives", 0).ToString() + "\n" + PlayerPrefs.GetInt("Score", 0);
     }
 }
