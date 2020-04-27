@@ -41,7 +41,6 @@ public class EnemyMover : MonoBehaviour
     public void Die()
     {
         this.Yeet();
-        PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score", 0) + 1);
     }
 
     private void Yeet()
