@@ -18,6 +18,7 @@ public class KeyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Container = GetComponentInParent<Transform>();
         rb.gravityScale = 0;
+		PlayerPrefs.SetInt("ScoreLvl" + lvlNum.ToString(), 0);
     }
 
     void FixedUpdate()
