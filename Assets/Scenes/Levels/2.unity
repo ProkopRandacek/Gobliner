@@ -23276,6 +23276,7 @@ MonoBehaviour:
   Player: {fileID: 938701362}
   distance: 2
   wait: 2
+  lvlNum: 2
 --- !u!50 &1116310556
 Rigidbody2D:
   serializedVersion: 4

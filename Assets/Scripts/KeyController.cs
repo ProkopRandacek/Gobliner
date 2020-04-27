@@ -6,6 +6,7 @@ public class KeyController : MonoBehaviour
     public Transform Player;
     public float distance;
     public float wait;
+	public int lvlNum;
 
     private bool content = true;
     private bool yeeted = false;
@@ -33,8 +34,8 @@ public class KeyController : MonoBehaviour
             wait -= Time.fixedDeltaTime;
             if (wait < 0)
             {
+				PlayerPrefs.SetInt("ScoreLvl" + lvlNum.ToString(), PlayerPrefs.GetInt("Score", 0));
                 PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level", 1) + 1);
-                PlayerPrefs.SetInt("BigScore", PlayerPrefs.GetInt("BigScore", 0) + PlayerPrefs.GetInt("Score", 0));
                 SceneManager.LoadScene("Scenes/Levels");
             }
         }

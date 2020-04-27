@@ -167,6 +167,7 @@ MonoBehaviour:
   Player: {fileID: 148254017}
   distance: 2
   wait: 2
+  lvlNum: 8
 --- !u!212 &5392784
 SpriteRenderer:
   m_ObjectHideFlags: 0

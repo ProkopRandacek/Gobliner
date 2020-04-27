@@ -242,6 +242,7 @@ MonoBehaviour:
   Player: {fileID: 148254017}
   distance: 2
   wait: 2
+  lvlNum: 10
 --- !u!212 &5392784
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1812,6 +1813,7 @@ Transform:
   - {fileID: 1674647241}
   - {fileID: 1296610514}
   - {fileID: 178313261}
+  - {fileID: 1497214906}
   - {fileID: 374404877}
   - {fileID: 816479764}
   - {fileID: 996147048}
@@ -1830,7 +1832,6 @@ Transform:
   - {fileID: 52912957}
   - {fileID: 1324584020}
   - {fileID: 165053355}
-  - {fileID: 1497214906}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
